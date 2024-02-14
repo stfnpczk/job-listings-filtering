@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- [Frontend Mentor - solution URL]()
-- [Live Demo]()
+- [Frontend Mentor - solution URL](https://www.frontendmentor.io/solutions/job-listings-filtering-using-react-styled-components-nextjs-44PpVdBHcb)
+- [Live Demo](https://job-listings-filtering-phi.vercel.app/)
 
 ## My process
 
