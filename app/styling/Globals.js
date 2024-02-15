@@ -61,6 +61,11 @@ const GlobalStyle = createGlobalStyle`
   button { 
     border: 0;
     background: none;
+    @media (hover: hover) {
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 
   p, h1, h2, h3, h4, h5, h6 {
