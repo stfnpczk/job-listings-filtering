@@ -53,7 +53,7 @@ const Tags = styled.div`
 
     &:hover {
       cursor: pointer;
-      background-color: #2b3939;
+      background-color: var(--black);
     }
   }
 `;

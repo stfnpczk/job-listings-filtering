@@ -130,27 +130,29 @@ const JobTags = styled.div`
   @media (min-width: ${sizes.desktop}) {
     margin: unset;
   }
+`;
 
-  .tag {
+const Tag = styled.button`
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.0075rem;
+  border-radius: 0.25rem;
+  transition: all 0.4s ease-in;
+
+  &.tag {
     color: var(--cyan);
     background-color: rgba(92, 165, 165, 0.1);
-    padding: 0.5rem;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: -0.0075rem;
-    border-radius: 0.25rem;
-    transition: all 0.4s ease-in;
 
     @media (hover: hover) {
       &:hover {
-        cursor: pointer;
-        background-color: var(--cyan);
+        background-color: #9ec5c5;
         color: var(--white);
       }
     }
   }
 
-  .highlightedTag {
+  &.highlightedTag {
     color: var(--white);
     background-color: var(--cyan);
   }
@@ -208,14 +210,14 @@ export default function JobItem(props) {
       </JobContainer>
       <JobTags>
         {tags.map((tag, index) => (
-          <button
-            className={` tag ${filters.includes(tag) ? 'highlightedTag' : ''} `}
+          <Tag
+            className={`${filters.includes(tag) ? 'highlightedTag' : 'tag'} `}
             key={index}
             value={tag}
             onClick={toggleFilter}
           >
             {tag}
-          </button>
+          </Tag>
         ))}
       </JobTags>
     </JobItemStyles>
